@@ -1,0 +1,25 @@
+{
+	"name": "rkv/screen-reader-only-format",
+	"description": "Add screen reader only text format to block editor",
+	"version": "0.1.0",
+	"type": "wordpress-plugin",
+	"keywords": [],
+	"homepage": "http://reaktivstudios.com",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Reaktiv Studios"
+		},
+		{
+			"name": "Nick the Geek"
+		}
+	],
+	"require": {
+		"php": ">=7.0",
+		"wp-coding-standards/wpcs": "^2.2"
+	},
+	"require-dev": {
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.5.0"
+	}
+}

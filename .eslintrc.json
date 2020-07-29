@@ -1,0 +1,53 @@
+{
+	"root": true,
+	"env": {
+		"browser": true,
+		"jest": true,
+		"node": true
+	},
+	"extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+	"ignorePatterns": ["polyfills", "lib"],
+	"globals": {
+		"document": true,
+		"fetch": true,
+		"FormData": true,
+		"Headers": true,
+		"window": true,
+		"wp": true,
+		"wpApiSettings": true
+	},
+	"parserOptions": {
+		"ecmaVersion": 2018,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"func-style": [
+			"error",
+			"expression",
+			{
+				"allowArrowFunctions": true
+			}
+		],
+		"no-console": [
+			"error",
+			{
+				"allow": ["warn", "error"]
+			}
+		],
+		"no-unused-vars": "error",
+		"no-var": "error",
+		"prefer-arrow-callback": "error",
+		"prefer-const": "error",
+		"react/no-unescaped-entities": "off",
+		"react/react-in-jsx-scope": "off",
+		"quote-props": ["error", "as-needed"]
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}
