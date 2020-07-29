@@ -1,0 +1,88 @@
+{
+	"name": "rkv-screen-reader-only-format",
+	"version": "0.1.0",
+	"author": "Reaktiv",
+	"license": "GPL-3.0",
+	"description": "RKV Starter",
+	"main": "index.js",
+	"scripts": {
+		"start": "run-p plugin-watch",
+		"build": "run-s plugin-build",
+		"plugin-watch": "cross-env NODE_ENV=development parcel watch src/blocks.js -d dist --out-file main.js --public-url ./",
+		"plugin-build": "cross-env NODE_ENV=production parcel build src/blocks.js -d dist --out-file main.js --public-url ./",
+		"lint": "run-p lint-plugin",
+		"lint-plugin": "eslint src --fix",
+		"format": "prettier --write \"./*.{css,html,js,json,scss}\" \"{common,src,themes}/**/*.{css,html,js,json,scss}\"",
+		"test": "jest --verbose",
+		"test-coverage": "npm run test -- --coverage && open ./coverage/lcov-report/index.html"
+	},
+	"dependencies": {
+		"@wordpress/element": "^2.13.1",
+		"babel-polyfill": "^6.26.0",
+		"classnames": "^2.2.6",
+		"lodash": "^4.17.19",
+		"micromodal": "^0.4.6",
+		"pretty": "^2.0.0",
+		"prop-types": "^15.7.2",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-modal": "^3.11.2",
+		"react-table": "^7.0.4",
+		"rkv": "0.0.2",
+		"sanitize.css": "^11.0.0",
+		"uuid": "^8.0.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.9.6",
+		"@babel/preset-react": "^7.9.4",
+		"@wordpress/api-fetch": "^3.14.0",
+		"@wordpress/babel-preset-default": "^4.12.1",
+		"autoprefixer": "^9.7.6",
+		"babel-jest": "^26.0.1",
+		"cross-env": "^7.0.2",
+		"eslint": "^6.8.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-prettier": "^3.1.3",
+		"eslint-plugin-react": "^7.19.0",
+		"filesize": "^6.1.0",
+		"gzip-size": "^5.1.1",
+		"husky": "^4.2.5",
+		"jest": "^26.0.1",
+		"npm-run-all": "^4.1.5",
+		"ora": "^4.0.4",
+		"parcel-bundler": "^1.12.4",
+		"prettier": "^2.0.5",
+		"pretty-quick": "^2.0.1",
+		"purgecss": "^2.2.1",
+		"sass": "^1.26.5",
+		"sass-mq": "^5.0.1",
+		"update-notifier": "^4.1.0"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run lint && pretty-quick --staged && ./vendor/bin/phpcs"
+		}
+	},
+	"prettier": {
+		"arrowParens": "always",
+		"bracketSpacing": true,
+		"htmlWhitespaceSensitivity": "strict",
+		"jsxBracketSameLine": false,
+		"printWidth": 100,
+		"semi": true,
+		"singleQuote": true,
+		"tabWidth": 2,
+		"trailingComma": "es5",
+		"useTabs": true
+	},
+	"postcss": {
+		"plugins": {
+			"autoprefixer": true
+		}
+	},
+	"browserslist": [
+		"defaults",
+		"IE 10",
+		"IE 11"
+	]
+}
