@@ -32,7 +32,7 @@ function dual_assets() {
 	wp_enqueue_style(
 		'srof-blocks-editor-css',
 		SROF_BLOCK_EDITOR_URL . 'dist/main.css',
-		[ 'wp-edit-blocks', 'wp-codemirror' ],
+		[],
 		'0.1'
 	);
 }

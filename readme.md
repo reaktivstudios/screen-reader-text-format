@@ -10,7 +10,7 @@ Adds a screen reader only text format to the block editor.
 
 ## Description
 
-Screen Reader Text Format adds a screen reader only text format control to the block editor. This allows content creators to correctly markup certain types of text content. For example, when using the *strikethrough* text format, it is almost always correct to include screan reader text that indicates the content has been struck out and if the content is replaced with an insert, the correct solution is to include screen reader text that indicates the insertion.
+Screen Reader Text Format adds a screen reader only text format control to the block editor. This allows content creators to correctly markup certain types of text content. For example, when using the *strikethrough* text format, it is almost always correct to include screen reader text that indicates the content has been struck out and if the content is replaced with an insert, the correct solution is to include screen reader text that indicates the insertion.
 
 Without this ability, content creators will have to do complicated HTML edits to create the correct text informing screen readers of strike, insert, and even "important" notes that are indicated with bold text since screen readers are completely agnostic towards those HTML tags.
 
