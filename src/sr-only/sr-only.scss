@@ -1,13 +1,13 @@
 .block-editor-page .is-selected {
 	.text-format-sr-only {
-		box-shadow: 0 0 0 2px red;
+		box-shadow: 0 0 0 2px #990000;
 		position: relative;
 	}
 
 	.text-format-sr-only:after {
 		content: '*';
 
-		background: red;
+		background: #990000;
 		color: #fff;
 		font-family: 'Verdana', sans-serif;
 		font-size: 11px;
