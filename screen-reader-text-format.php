@@ -8,6 +8,9 @@ Version: 1.0
 Requires at least: 5.4
 Author URI: https://reaktivstudios.com
 
+Text Domain: screen-reader-text-format
+Domain Path: /languages
+
 @package screen-reader-text-format
 */
 
@@ -30,6 +33,16 @@ Author URI: https://reaktivstudios.com
 
 define( 'SROF_BLOCK_EDITOR', plugin_dir_path( __FILE__ ) );
 define( 'SROF_BLOCK_EDITOR_URL', plugin_dir_url( __FILE__ ) );
+
+/**
+ * Loads the text domain.
+ *
+ * @return void
+ */
+function srtf_load_plugin_textdomain() {
+    load_plugin_textdomain( 'screen-reader-text-format', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'plugins_loaded', 'srtf_load_plugin_textdomain' );
 
 /**
  * Block Initializer.

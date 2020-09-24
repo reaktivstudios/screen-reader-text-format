@@ -18,6 +18,7 @@
 	},
 	"dependencies": {
 		"@wordpress/element": "^2.13.1",
+		"@wordpress/icons": "^2.6.0",
 		"babel-polyfill": "^6.26.0",
 		"classnames": "^2.2.6",
 		"lodash": "^4.17.19",

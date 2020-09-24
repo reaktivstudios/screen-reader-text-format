@@ -26,14 +26,13 @@
 		bottom: 100%;
 		z-index: 1;
 	}
-
-	.text-format-sr-only:hover:after,
-	.text-format-sr-only:focus:after {
-		content: '* Screen Reader Text';
-	}
 }
 
-.text-format-sr-only:not(.is-selected .text-format-sr-only) {
+.block-editor-page.sr-only-show-always .text-format-sr-only {
+	border-bottom: 1px solid #990000;
+}
+
+body:not(.sr-only-show-always) .text-format-sr-only:not(.is-selected .text-format-sr-only) {
 	// Local variables.
 	$size: 1px;
 	$size-negative: -1 * $size;
