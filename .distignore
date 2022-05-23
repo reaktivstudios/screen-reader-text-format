@@ -6,3 +6,13 @@
 .gitignore
 .gitattributes
 README.md
+readme.md
+.phpcs.xml.dist
+.prettierignore
+LICENSE
+babel.config.json
+composer.json
+composer.lock
+package-lock.json
+package.json
+purgecss.config.js
