@@ -4,7 +4,7 @@ Plugin Name: Screen Reader Text Format
 Plugin URI: https://github.com/reaktivstudios/screen-reader-text-format
 Description: Adds a screen reader only text format to the block editor.
 Author: Reaktiv Studios
-Version: 1.0
+Version: 1.1
 Requires at least: 5.4
 Author URI: https://reaktivstudios.com
 
