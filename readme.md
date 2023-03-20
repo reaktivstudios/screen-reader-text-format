@@ -47,7 +47,7 @@ Once you add and hide text it may be difficult to find. Fortunately we added som
 - [fix] Issue with block based widget editor
 - [chore] Update build method
 - [chore] Code standard updates
-- [core] Optimize images
+- [chore] Optimize images
 
 ### 1.0.0
 
