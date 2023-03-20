@@ -3,9 +3,6 @@
  * Adds functionality to Gutenberg by creating a sidebar plugin
  */
 
-// Import styles for the editor.
-import './editor.scss';
-
 // Import dependencies.
 import RkvSidebar from './components/rkv-sidebar';
 
@@ -17,7 +14,7 @@ const { PluginSidebar, PluginSidebarMoreMenuItem } = wp.editPost;
 const sidebarName = 'rkv-screen-reader-text-visibility';
 
 // Add a label for the sidebar.
-const sidebarLabel = __( 'Screen Reader Text Visibility' );
+const sidebarLabel = __('Screen Reader Text Visibility');
 
 // Render function.
 const render = () => {
@@ -34,7 +31,7 @@ const render = () => {
 };
 
 // Register the plugin for use in Gutenberg.
-registerPlugin( sidebarName, {
+registerPlugin(sidebarName, {
 	icon: 'visibility',
 	render,
-} );
+});

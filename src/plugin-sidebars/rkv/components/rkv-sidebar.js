@@ -27,10 +27,13 @@ export class RkvSidebar extends Component {
 
 	render() {
 		return (
-			<PanelBody title={__( 'Screen Reader Text Options', 'screen-reader-text-format' )} initialOpen={true}>
+			<PanelBody
+				title={__('Screen Reader Text Options', 'screen-reader-text-format')}
+				initialOpen={true}
+			>
 				<PanelRow>
 					<UserMetaCheckboxControl
-						label={__( 'Always show screen reader text?', 'screen-reader-text-format' )}
+						label={__('Always show screen reader text?', 'screen-reader-text-format')}
 						metaKey="show_sr_text_in_editor"
 						onChange={this.setHideSRTextValue}
 					/>

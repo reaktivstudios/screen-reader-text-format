@@ -1,5 +1,5 @@
 <?php
-/*
+/**
 Plugin Name: Screen Reader Text Format
 Plugin URI: https://github.com/reaktivstudios/screen-reader-text-format
 Description: Adds a screen reader only text format to the block editor.
@@ -12,7 +12,7 @@ Text Domain: screen-reader-text-format
 Domain Path: /languages
 
 @package screen-reader-text-format
-*/
+ */
 
 /*
 	Copyright 2020 Reaktiv Studios, Josh Eaton
@@ -39,10 +39,10 @@ define( 'SROF_BLOCK_EDITOR_URL', plugin_dir_url( __FILE__ ) );
  *
  * @return void
  */
-function srtf_load_plugin_textdomain() {
-    load_plugin_textdomain( 'screen-reader-text-format', FALSE, basename( dirname( __FILE__ ) ) . '/languages/' );
+function srof_load_plugin_textdomain() {
+	load_plugin_textdomain( 'screen-reader-text-format', false, basename( dirname( __FILE__ ) ) . '/languages/' );
 }
-add_action( 'plugins_loaded', 'srtf_load_plugin_textdomain' );
+add_action( 'plugins_loaded', 'srof_load_plugin_textdomain' );
 
 /**
  * Block Initializer.

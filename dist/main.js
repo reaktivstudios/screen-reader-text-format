@@ -1,22 +1,212 @@
-parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcelRequire,u="function"==typeof require&&require;function f(t,n){if(!r[t]){if(!e[t]){var i="function"==typeof parcelRequire&&parcelRequire;if(!n&&i)return i(t,!0);if(o)return o(t,!0);if(u&&"string"==typeof t)return u(t);var c=new Error("Cannot find module '"+t+"'");throw c.code="MODULE_NOT_FOUND",c}p.resolve=function(r){return e[t][1][r]||r},p.cache={};var l=r[t]=new f.Module(t);e[t][0].call(l.exports,p,l,l.exports,this)}return r[t].exports;function p(e){return f(p.resolve(e))}}f.isParcelRequire=!0,f.Module=function(e){this.id=e,this.bundle=f,this.exports={}},f.modules=e,f.cache=r,f.parent=o,f.register=function(r,t){e[r]=[function(e,r){r.exports=t},{}]};for(var c=0;c<t.length;c++)try{f(t[c])}catch(e){i||(i=e)}if(t.length){var l=f(t[t.length-1]);"object"==typeof exports&&"undefined"!=typeof module?module.exports=l:"function"==typeof define&&define.amd?define(function(){return l}):n&&(this[n]=l)}if(parcelRequire=f,i)throw i;return f}({"Asjh":[function(require,module,exports) {
-"use strict";var _="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";module.exports=_;
-},{}],"wVGV":[function(require,module,exports) {
-"use strict";var e=require("./lib/ReactPropTypesSecret");function r(){}function t(){}t.resetWarningCache=r,module.exports=function(){function n(r,t,n,o,a,p){if(p!==e){var c=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw c.name="Invariant Violation",c}}function o(){return n}n.isRequired=n;var a={array:n,bool:n,func:n,number:n,object:n,string:n,symbol:n,any:n,arrayOf:o,element:n,elementType:n,instanceOf:o,node:n,objectOf:o,oneOf:o,oneOfType:o,shape:o,exact:o,checkPropTypes:t,resetWarningCache:r};return a.PropTypes=a,a};
-},{"./lib/ReactPropTypesSecret":"Asjh"}],"D9Od":[function(require,module,exports) {
-var r,e;module.exports=require("./factoryWithThrowingShims")();
-},{"./factoryWithThrowingShims":"wVGV"}],"yNkt":[function(require,module,exports) {
-
-},{}],"RtZ8":[function(require,module,exports) {
-"use strict";var e=t(require("prop-types"));function t(e){return e&&e.__esModule?e:{default:e}}require("./sr-only.scss");var r=wp.i18n.__,n=wp.richText,a=n.registerFormatType,o=n.toggleFormat,c=wp.editor.RichTextToolbarButton,i="rkv/sr-only",l=r("Screen Reader Only","screen-reader-text-format"),s=function(e){var t=e.isActive,r=e.value,n=e.onChange,a=e.onFocus;return React.createElement(React.Fragment,null,React.createElement(c,{icon:"hidden",title:l,onClick:function(){n(o(r,{type:i})),a()},isActive:t}))};s.propTypes={isActive:e.default.bool,value:e.default.string,onChange:e.default.func,onFocus:e.default.func},a(i,{title:l,tagName:"span",className:"text-format-sr-only",edit:s});
-},{"prop-types":"D9Od","./sr-only.scss":"yNkt"}],"e0S6":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=exports.UserMetaCheckboxControl=void 0;var e=t(require("prop-types"));function t(e){return e&&e.__esModule?e:{default:e}}function n(e){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function o(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function a(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}function c(e,t,n){return t&&a(e.prototype,t),n&&a(e,n),e}function u(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&s(e,t)}function s(e,t){return(s=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function i(e){var t=p();return function(){var n,o=h(e);if(t){var r=h(this).constructor;n=Reflect.construct(o,arguments,r)}else n=o.apply(this,arguments);return l(this,n)}}function l(e,t){return!t||"object"!==n(t)&&"function"!=typeof t?f(e):t}function f(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function p(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],function(){})),!0}catch(e){return!1}}function h(e){return(h=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}var d=wp.components.CheckboxControl,y=wp.data.select,b=wp.element.Component,m=function(e){u(n,b);var t=i(n);function n(e){var o;return r(this,n),(o=t.call(this,e)).state={checked:""},o.setUserMetaValue=o.setUserMetaValue.bind(f(o)),o.changeChecked=o.changeChecked.bind(f(o)),o}return c(n,[{key:"componentDidMount",value:function(){var e=this;wp.apiFetch({path:"/wp/v2/users/me",method:"GET"}).then(function(t){var n=t.meta[e.props.metaKey]||!1;e.setState({checked:n}),e.props.onChange(n),e.updateBodyClass(n)})}},{key:"setUserMetaValue",value:function(e){wp.apiFetch({path:"/wp/v2/users/me",method:"POST",data:{meta:o({},this.props.metaKey,e)}})}},{key:"changeChecked",value:function(e){this.setState({checked:e}),this.setUserMetaValue(e),this.props.onChange(e),this.updateBodyClass(e)}},{key:"updateBodyClass",value:function(e){e?document.body.classList.add("sr-only-show-always"):document.body.classList.remove("sr-only-show-always")}},{key:"render",value:function(){var e=this.props,t=e.heading,n=e.label,o=e.help,r=e.className;return React.createElement(d,{heading:t,label:n,help:o,checked:this.state.checked,onChange:this.changeChecked,className:r})}}]),n}();exports.UserMetaCheckboxControl=m,m.defaultProps={className:"",heading:"",help:"",label:"",metaKey:"",onChange:function(){}},m.propTypes={className:e.default.string,heading:e.default.string,help:e.default.string,label:e.default.string,metaKey:e.default.string,onChange:e.default.func};var v=m;exports.default=v;
-},{"prop-types":"D9Od"}],"X9xN":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=exports.RkvSidebar=void 0;var e=t(require("../../../components/meta/checkbox"));function t(e){return e&&e.__esModule?e:{default:e}}function n(e){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function o(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function u(e,t,n){return t&&o(e.prototype,t),n&&o(e,n),e}function c(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&i(e,t)}function i(e,t){return(i=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function a(e){var t=s();return function(){var n,r=p(e);if(t){var o=p(this).constructor;n=Reflect.construct(r,arguments,o)}else n=r.apply(this,arguments);return f(this,n)}}function f(e,t){return!t||"object"!==n(t)&&"function"!=typeof t?l(e):t}function l(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function s(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],function(){})),!0}catch(e){return!1}}function p(e){return(p=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}var y=wp.i18n.__,d=wp.element.Component,b=wp.components,h=b.PanelBody,m=b.PanelRow,v=function(t){c(o,d);var n=a(o);function o(){var e;return r(this,o),(e=n.call(this)).state={hideSRTextValue:!1},e.setHideSRTextValue=e.setHideSRTextValue.bind(l(e)),e}return u(o,[{key:"setHideSRTextValue",value:function(e){this.setState({hideSRTextValue:e})}},{key:"render",value:function(){return React.createElement(h,{title:y("Screen Reader Text Options","screen-reader-text-format"),initialOpen:!0},React.createElement(m,null,React.createElement(e.default,{label:y("Always show screen reader text?","screen-reader-text-format"),metaKey:"show_sr_text_in_editor",onChange:this.setHideSRTextValue})))}}]),o}();exports.RkvSidebar=v;var x=v;exports.default=x;
-},{"../../../components/meta/checkbox":"e0S6"}],"p0PC":[function(require,module,exports) {
-"use strict";require("./editor.scss");var e=t(require("./components/rkv-sidebar"));function t(e){return e&&e.__esModule?e:{default:e}}var i=wp.i18n.__,r=wp.plugins.registerPlugin,n=wp.editPost,a=n.PluginSidebar,l=n.PluginSidebarMoreMenuItem,c="rkv-screen-reader-text-visibility",u=i("Screen Reader Text Visibility"),s=function(){return React.createElement(React.Fragment,null,React.createElement(l,{target:c,icon:"visibility"},u),React.createElement(a,{name:c,title:u},React.createElement(e.default,null)))};r(c,{icon:"visibility",render:s});
-},{"./editor.scss":"yNkt","./components/rkv-sidebar":"X9xN"}],"RJYJ":[function(require,module,exports) {
-"use strict";require("./rkv");
-},{"./rkv":"p0PC"}],"X1ux":[function(require,module,exports) {
-"use strict";require("./sr-only"),require("./plugin-sidebars");
-},{"./sr-only":"RtZ8","./plugin-sidebars":"RJYJ"}]},{},["X1ux"], null)
-//# sourceMappingURL=main.js.map
+(() => {
+	var V = Object.create;
+	var u = Object.defineProperty;
+	var E = Object.getOwnPropertyDescriptor;
+	var F = Object.getOwnPropertyNames;
+	var M = Object.getPrototypeOf,
+		B = Object.prototype.hasOwnProperty;
+	var c = (t, e) => () => (e || t((e = { exports: {} }).exports, e), e.exports);
+	var I = (t, e, s, o) => {
+		if ((e && typeof e == 'object') || typeof e == 'function')
+			for (let r of F(e))
+				!B.call(t, r) &&
+					r !== s &&
+					u(t, r, { get: () => e[r], enumerable: !(o = E(e, r)) || o.enumerable });
+		return t;
+	};
+	var m = (t, e, s) => (
+		(s = t != null ? V(M(t)) : {}),
+		I(e || !t || !t.__esModule ? u(s, 'default', { value: t, enumerable: !0 }) : s, t)
+	);
+	var g = c((se, y) => {
+		'use strict';
+		var U = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+		y.exports = U;
+	});
+	var w = c((re, f) => {
+		'use strict';
+		var A = g();
+		function T() {}
+		function b() {}
+		b.resetWarningCache = T;
+		f.exports = function () {
+			function t(o, r, O, $, ee, N) {
+				if (N !== A) {
+					var d = new Error(
+						'Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types'
+					);
+					throw ((d.name = 'Invariant Violation'), d);
+				}
+			}
+			t.isRequired = t;
+			function e() {
+				return t;
+			}
+			var s = {
+				array: t,
+				bigint: t,
+				bool: t,
+				func: t,
+				number: t,
+				object: t,
+				string: t,
+				symbol: t,
+				any: t,
+				arrayOf: e,
+				element: t,
+				elementType: t,
+				instanceOf: e,
+				node: t,
+				objectOf: e,
+				oneOf: e,
+				oneOfType: e,
+				shape: e,
+				exact: e,
+				checkPropTypes: b,
+				resetWarningCache: T,
+			};
+			return (s.PropTypes = s), s;
+		};
+	});
+	var p = c((ae, x) => {
+		x.exports = w()();
+		var oe, ne;
+	});
+	var a = m(p()),
+		D = wp.i18n.__,
+		q = wp.richText.registerFormatType,
+		H = wp.richText.toggleFormat,
+		K = wp.blockEditor.RichTextToolbarButton,
+		C = 'rkv/sr-only',
+		P = D('Screen Reader Only', 'screen-reader-text-format'),
+		R = ({ isActive: t, value: e, onChange: s, onFocus: o }) => {
+			let r = () => {
+				s(H(e, { type: C }));
+			};
+			return React.createElement(
+				React.Fragment,
+				null,
+				React.createElement(K, {
+					icon: 'hidden',
+					title: P,
+					onClick: () => {
+						r(), o();
+					},
+					isActive: t,
+				})
+			);
+		};
+	R.propTypes = {
+		isActive: a.default.bool,
+		value: a.default.string,
+		onChange: a.default.func,
+		onFocus: a.default.func,
+	};
+	q(C, { title: P, tagName: 'span', className: 'text-format-sr-only', edit: R });
+	var n = m(p()),
+		{ CheckboxControl: L } = wp.components,
+		{ select: ie } = wp.data,
+		{ Component: W } = wp.element,
+		i = class extends W {
+			constructor(e) {
+				super(e),
+					(this.state = { checked: '' }),
+					(this.setUserMetaValue = this.setUserMetaValue.bind(this)),
+					(this.changeChecked = this.changeChecked.bind(this));
+			}
+			componentDidMount() {
+				wp.apiFetch({ path: '/wp/v2/users/me', method: 'GET' }).then((e) => {
+					let s = e.meta[this.props.metaKey] || !1;
+					this.setState({ checked: s }), this.props.onChange(s), this.updateBodyClass(s);
+				});
+			}
+			setUserMetaValue(e) {
+				wp.apiFetch({
+					path: '/wp/v2/users/me',
+					method: 'POST',
+					data: { meta: { [this.props.metaKey]: e } },
+				});
+			}
+			changeChecked(e) {
+				this.setState({ checked: e }),
+					this.setUserMetaValue(e),
+					this.props.onChange(e),
+					this.updateBodyClass(e);
+			}
+			updateBodyClass(e) {
+				e
+					? document.body.classList.add('sr-only-show-always')
+					: document.body.classList.remove('sr-only-show-always');
+			}
+			render() {
+				let { heading: e, label: s, help: o, className: r } = this.props;
+				return React.createElement(L, {
+					heading: e,
+					label: s,
+					help: o,
+					checked: this.state.checked,
+					onChange: this.changeChecked,
+					className: r,
+				});
+			}
+		};
+	i.defaultProps = {
+		className: '',
+		heading: '',
+		help: '',
+		label: '',
+		metaKey: '',
+		onChange: () => {},
+	};
+	i.propTypes = {
+		className: n.default.string,
+		heading: n.default.string,
+		help: n.default.string,
+		label: n.default.string,
+		metaKey: n.default.string,
+		onChange: n.default.func,
+	};
+	var S = i;
+	var { __: _ } = wp.i18n,
+		{ Component: j } = wp.element,
+		{ PanelBody: G, PanelRow: Y } = wp.components,
+		l = class extends j {
+			constructor() {
+				super(),
+					(this.state = { hideSRTextValue: !1 }),
+					(this.setHideSRTextValue = this.setHideSRTextValue.bind(this));
+			}
+			setHideSRTextValue(e) {
+				this.setState({ hideSRTextValue: e });
+			}
+			render() {
+				return React.createElement(
+					G,
+					{ title: _('Screen Reader Text Options', 'screen-reader-text-format'), initialOpen: !0 },
+					React.createElement(
+						Y,
+						null,
+						React.createElement(S, {
+							label: _('Always show screen reader text?', 'screen-reader-text-format'),
+							metaKey: 'show_sr_text_in_editor',
+							onChange: this.setHideSRTextValue,
+						})
+					)
+				);
+			}
+		},
+		v = l;
+	var { __: z } = wp.i18n,
+		{ registerPlugin: J } = wp.plugins,
+		{ PluginSidebar: Q, PluginSidebarMoreMenuItem: X } = wp.editPost,
+		h = 'rkv-screen-reader-text-visibility',
+		k = z('Screen Reader Text Visibility'),
+		Z = () =>
+			React.createElement(
+				React.Fragment,
+				null,
+				React.createElement(X, { target: h, icon: 'visibility' }, k),
+				React.createElement(Q, { name: h, title: k }, React.createElement(v, null))
+			);
+	J(h, { icon: 'visibility', render: Z });
+})();
