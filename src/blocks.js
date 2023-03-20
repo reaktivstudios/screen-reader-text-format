@@ -12,4 +12,3 @@
 
 // Screen reader only text format control.
 import './sr-only';
-import './plugin-sidebars';

@@ -74,7 +74,6 @@
 	});
 	var a = N(w()),
 		{ CheckboxControl: I } = wp.components,
-		{ select: $ } = wp.data,
 		{ Component: U } = wp.element,
 		o = class extends U {
 			constructor(e) {
