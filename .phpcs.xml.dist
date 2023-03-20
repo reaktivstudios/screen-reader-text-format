@@ -10,7 +10,7 @@
 	<arg name="parallel" value="16"/>
 
 	<config name="testVersion" value="7.0"/>
-	<rule ref="PHPCompatibilityWP"/>
+	<rule ref="PHPCompatibility"/>
 
 	<rule ref="WordPress-Core">
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax.Found" />
@@ -24,7 +24,7 @@
 
 	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
 		<properties>
-			<property name="prefixes" type="array" value="srof"/>
+			<property name="prefixes" type="array" value="srof,RKV"/>
 		</properties>
 	</rule>
 	<rule ref="WordPress.WP.I18n">

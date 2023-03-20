@@ -1,8 +1,9 @@
 # Screen Reader Text Format
+
 Contributors: jjeaton, reaktivstudios, nick_thegeek
 Requires at least: 5.4
 Tested up to: 6.0
-Stable tag: 1.0
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -10,11 +11,12 @@ Adds a screen reader only text format to the block editor.
 
 ## Description
 
-Screen Reader Text Format adds a screen reader only text format control to the block editor. This allows content creators to correctly markup certain types of text content. For example, when using the *strikethrough* text format, it is almost always correct to include screan reader text that indicates the content has been struck out and if the content is replaced with an insert, the correct solution is to include screen reader text that indicates the insertion.
+Screen Reader Text Format adds a screen reader only text format control to the block editor. This allows content creators to correctly markup certain types of text content. For example, when using the _strikethrough_ text format, it is almost always correct to include screan reader text that indicates the content has been struck out and if the content is replaced with an insert, the correct solution is to include screen reader text that indicates the insertion.
 
 Without this ability, content creators will have to do complicated HTML edits to create the correct text informing screen readers of strike, insert, and even "important" notes that are indicated with bold text since screen readers are completely agnostic towards those HTML tags.
 
 ## Installation
+
 1. Upload the `screen-reader-text-format` folder and all its contents to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
@@ -40,8 +42,14 @@ Once you add and hide text it may be difficult to find. Fortunately we added som
 
 ## Changelog
 
+### 1.1.0
+
+- [fix] Issue with block based widget editor
+- [chore] Update build method
+- [chore] Code standard updates
+
 ### 1.0.0
 
-* Initial release
+- Initial release
 
 ## Upgrade Notice

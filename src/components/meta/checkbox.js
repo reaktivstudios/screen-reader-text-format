@@ -5,7 +5,6 @@
 import PropTypes from 'prop-types';
 
 const { CheckboxControl } = wp.components;
-const { select } = wp.data;
 const { Component } = wp.element;
 
 export class UserMetaCheckboxControl extends Component {
@@ -21,10 +20,10 @@ export class UserMetaCheckboxControl extends Component {
 	}
 
 	componentDidMount() {
-		wp.apiFetch( {
+		wp.apiFetch({
 			path: '/wp/v2/users/me',
-			method: 'GET'
-		} ).then( ( response ) => {
+			method: 'GET',
+		}).then((response) => {
 			const UserMetaValue = response.meta[this.props.metaKey] || false;
 			this.setState({ checked: UserMetaValue });
 			this.props.onChange(UserMetaValue);
@@ -33,15 +32,15 @@ export class UserMetaCheckboxControl extends Component {
 	}
 
 	setUserMetaValue(UserMetaValue) {
-		wp.apiFetch( {
+		wp.apiFetch({
 			path: '/wp/v2/users/me',
 			method: 'POST',
 			data: {
 				meta: {
 					[this.props.metaKey]: UserMetaValue,
-				}
-			}
-		} );
+				},
+			},
+		});
 	}
 
 	changeChecked(checked) {
@@ -52,10 +51,10 @@ export class UserMetaCheckboxControl extends Component {
 	}
 
 	updateBodyClass(checked) {
-		if ( checked ) {
-			document.body.classList.add( 'sr-only-show-always' );
+		if (checked) {
+			document.body.classList.add('sr-only-show-always');
 		} else {
-			document.body.classList.remove( 'sr-only-show-always' );
+			document.body.classList.remove('sr-only-show-always');
 		}
 	}
 

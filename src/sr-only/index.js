@@ -5,14 +5,14 @@
  */
 
 import PropTypes from 'prop-types';
-import './sr-only.scss';
 
-const { __ } = wp.i18n;
-const { registerFormatType, toggleFormat } = wp.richText;
-const { RichTextToolbarButton } = wp.editor;
+const __ = wp.i18n.__;
+const registerFormatType = wp.richText.registerFormatType;
+const toggleFormat = wp.richText.toggleFormat;
+const RichTextToolbarButton = wp.blockEditor.RichTextToolbarButton;
 
 const name = 'rkv/sr-only';
-const title = __( 'Screen Reader Only', 'screen-reader-text-format' );
+const title = __('Screen Reader Only', 'screen-reader-text-format');
 
 const srOnlyEdit = ({ isActive, value, onChange, onFocus }) => {
 	const onToggle = () => {

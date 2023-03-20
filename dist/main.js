@@ -1,22 +1,106 @@
-parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcelRequire,u="function"==typeof require&&require;function f(t,n){if(!r[t]){if(!e[t]){var i="function"==typeof parcelRequire&&parcelRequire;if(!n&&i)return i(t,!0);if(o)return o(t,!0);if(u&&"string"==typeof t)return u(t);var c=new Error("Cannot find module '"+t+"'");throw c.code="MODULE_NOT_FOUND",c}p.resolve=function(r){return e[t][1][r]||r},p.cache={};var l=r[t]=new f.Module(t);e[t][0].call(l.exports,p,l,l.exports,this)}return r[t].exports;function p(e){return f(p.resolve(e))}}f.isParcelRequire=!0,f.Module=function(e){this.id=e,this.bundle=f,this.exports={}},f.modules=e,f.cache=r,f.parent=o,f.register=function(r,t){e[r]=[function(e,r){r.exports=t},{}]};for(var c=0;c<t.length;c++)try{f(t[c])}catch(e){i||(i=e)}if(t.length){var l=f(t[t.length-1]);"object"==typeof exports&&"undefined"!=typeof module?module.exports=l:"function"==typeof define&&define.amd?define(function(){return l}):n&&(this[n]=l)}if(parcelRequire=f,i)throw i;return f}({"Asjh":[function(require,module,exports) {
-"use strict";var _="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";module.exports=_;
-},{}],"wVGV":[function(require,module,exports) {
-"use strict";var e=require("./lib/ReactPropTypesSecret");function r(){}function t(){}t.resetWarningCache=r,module.exports=function(){function n(r,t,n,o,a,p){if(p!==e){var c=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw c.name="Invariant Violation",c}}function o(){return n}n.isRequired=n;var a={array:n,bool:n,func:n,number:n,object:n,string:n,symbol:n,any:n,arrayOf:o,element:n,elementType:n,instanceOf:o,node:n,objectOf:o,oneOf:o,oneOfType:o,shape:o,exact:o,checkPropTypes:t,resetWarningCache:r};return a.PropTypes=a,a};
-},{"./lib/ReactPropTypesSecret":"Asjh"}],"D9Od":[function(require,module,exports) {
-var r,e;module.exports=require("./factoryWithThrowingShims")();
-},{"./factoryWithThrowingShims":"wVGV"}],"yNkt":[function(require,module,exports) {
-
-},{}],"RtZ8":[function(require,module,exports) {
-"use strict";var e=t(require("prop-types"));function t(e){return e&&e.__esModule?e:{default:e}}require("./sr-only.scss");var r=wp.i18n.__,n=wp.richText,a=n.registerFormatType,o=n.toggleFormat,c=wp.editor.RichTextToolbarButton,i="rkv/sr-only",l=r("Screen Reader Only","screen-reader-text-format"),s=function(e){var t=e.isActive,r=e.value,n=e.onChange,a=e.onFocus;return React.createElement(React.Fragment,null,React.createElement(c,{icon:"hidden",title:l,onClick:function(){n(o(r,{type:i})),a()},isActive:t}))};s.propTypes={isActive:e.default.bool,value:e.default.string,onChange:e.default.func,onFocus:e.default.func},a(i,{title:l,tagName:"span",className:"text-format-sr-only",edit:s});
-},{"prop-types":"D9Od","./sr-only.scss":"yNkt"}],"e0S6":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=exports.UserMetaCheckboxControl=void 0;var e=t(require("prop-types"));function t(e){return e&&e.__esModule?e:{default:e}}function n(e){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function o(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function a(e,t){for(var n=0;n<t.length;n++){var o=t[n];o.enumerable=o.enumerable||!1,o.configurable=!0,"value"in o&&(o.writable=!0),Object.defineProperty(e,o.key,o)}}function c(e,t,n){return t&&a(e.prototype,t),n&&a(e,n),e}function u(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&s(e,t)}function s(e,t){return(s=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function i(e){var t=p();return function(){var n,o=h(e);if(t){var r=h(this).constructor;n=Reflect.construct(o,arguments,r)}else n=o.apply(this,arguments);return l(this,n)}}function l(e,t){return!t||"object"!==n(t)&&"function"!=typeof t?f(e):t}function f(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function p(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],function(){})),!0}catch(e){return!1}}function h(e){return(h=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}var d=wp.components.CheckboxControl,y=wp.data.select,b=wp.element.Component,m=function(e){u(n,b);var t=i(n);function n(e){var o;return r(this,n),(o=t.call(this,e)).state={checked:""},o.setUserMetaValue=o.setUserMetaValue.bind(f(o)),o.changeChecked=o.changeChecked.bind(f(o)),o}return c(n,[{key:"componentDidMount",value:function(){var e=this;wp.apiFetch({path:"/wp/v2/users/me",method:"GET"}).then(function(t){var n=t.meta[e.props.metaKey]||!1;e.setState({checked:n}),e.props.onChange(n),e.updateBodyClass(n)})}},{key:"setUserMetaValue",value:function(e){wp.apiFetch({path:"/wp/v2/users/me",method:"POST",data:{meta:o({},this.props.metaKey,e)}})}},{key:"changeChecked",value:function(e){this.setState({checked:e}),this.setUserMetaValue(e),this.props.onChange(e),this.updateBodyClass(e)}},{key:"updateBodyClass",value:function(e){e?document.body.classList.add("sr-only-show-always"):document.body.classList.remove("sr-only-show-always")}},{key:"render",value:function(){var e=this.props,t=e.heading,n=e.label,o=e.help,r=e.className;return React.createElement(d,{heading:t,label:n,help:o,checked:this.state.checked,onChange:this.changeChecked,className:r})}}]),n}();exports.UserMetaCheckboxControl=m,m.defaultProps={className:"",heading:"",help:"",label:"",metaKey:"",onChange:function(){}},m.propTypes={className:e.default.string,heading:e.default.string,help:e.default.string,label:e.default.string,metaKey:e.default.string,onChange:e.default.func};var v=m;exports.default=v;
-},{"prop-types":"D9Od"}],"X9xN":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.default=exports.RkvSidebar=void 0;var e=t(require("../../../components/meta/checkbox"));function t(e){return e&&e.__esModule?e:{default:e}}function n(e){return(n="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function r(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function o(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}function u(e,t,n){return t&&o(e.prototype,t),n&&o(e,n),e}function c(e,t){if("function"!=typeof t&&null!==t)throw new TypeError("Super expression must either be null or a function");e.prototype=Object.create(t&&t.prototype,{constructor:{value:e,writable:!0,configurable:!0}}),t&&i(e,t)}function i(e,t){return(i=Object.setPrototypeOf||function(e,t){return e.__proto__=t,e})(e,t)}function a(e){var t=s();return function(){var n,r=p(e);if(t){var o=p(this).constructor;n=Reflect.construct(r,arguments,o)}else n=r.apply(this,arguments);return f(this,n)}}function f(e,t){return!t||"object"!==n(t)&&"function"!=typeof t?l(e):t}function l(e){if(void 0===e)throw new ReferenceError("this hasn't been initialised - super() hasn't been called");return e}function s(){if("undefined"==typeof Reflect||!Reflect.construct)return!1;if(Reflect.construct.sham)return!1;if("function"==typeof Proxy)return!0;try{return Date.prototype.toString.call(Reflect.construct(Date,[],function(){})),!0}catch(e){return!1}}function p(e){return(p=Object.setPrototypeOf?Object.getPrototypeOf:function(e){return e.__proto__||Object.getPrototypeOf(e)})(e)}var y=wp.i18n.__,d=wp.element.Component,b=wp.components,h=b.PanelBody,m=b.PanelRow,v=function(t){c(o,d);var n=a(o);function o(){var e;return r(this,o),(e=n.call(this)).state={hideSRTextValue:!1},e.setHideSRTextValue=e.setHideSRTextValue.bind(l(e)),e}return u(o,[{key:"setHideSRTextValue",value:function(e){this.setState({hideSRTextValue:e})}},{key:"render",value:function(){return React.createElement(h,{title:y("Screen Reader Text Options","screen-reader-text-format"),initialOpen:!0},React.createElement(m,null,React.createElement(e.default,{label:y("Always show screen reader text?","screen-reader-text-format"),metaKey:"show_sr_text_in_editor",onChange:this.setHideSRTextValue})))}}]),o}();exports.RkvSidebar=v;var x=v;exports.default=x;
-},{"../../../components/meta/checkbox":"e0S6"}],"p0PC":[function(require,module,exports) {
-"use strict";require("./editor.scss");var e=t(require("./components/rkv-sidebar"));function t(e){return e&&e.__esModule?e:{default:e}}var i=wp.i18n.__,r=wp.plugins.registerPlugin,n=wp.editPost,a=n.PluginSidebar,l=n.PluginSidebarMoreMenuItem,c="rkv-screen-reader-text-visibility",u=i("Screen Reader Text Visibility"),s=function(){return React.createElement(React.Fragment,null,React.createElement(l,{target:c,icon:"visibility"},u),React.createElement(a,{name:c,title:u},React.createElement(e.default,null)))};r(c,{icon:"visibility",render:s});
-},{"./editor.scss":"yNkt","./components/rkv-sidebar":"X9xN"}],"RJYJ":[function(require,module,exports) {
-"use strict";require("./rkv");
-},{"./rkv":"p0PC"}],"X1ux":[function(require,module,exports) {
-"use strict";require("./sr-only"),require("./plugin-sidebars");
-},{"./sr-only":"RtZ8","./plugin-sidebars":"RJYJ"}]},{},["X1ux"], null)
-//# sourceMappingURL=main.js.map
+(() => {
+	var v = Object.create;
+	var p = Object.defineProperty;
+	var b = Object.getOwnPropertyDescriptor;
+	var x = Object.getOwnPropertyNames;
+	var k = Object.getPrototypeOf,
+		E = Object.prototype.hasOwnProperty;
+	var s = (e, t) => () => (t || e((t = { exports: {} }).exports, t), t.exports);
+	var P = (e, t, r, n) => {
+		if ((t && typeof t == 'object') || typeof t == 'function')
+			for (let o of x(t))
+				!E.call(e, o) &&
+					o !== r &&
+					p(e, o, { get: () => t[o], enumerable: !(n = b(t, o)) || n.enumerable });
+		return e;
+	};
+	var C = (e, t, r) => (
+		(r = e != null ? v(k(e)) : {}),
+		P(t || !e || !e.__esModule ? p(r, 'default', { value: e, enumerable: !0 }) : r, e)
+	);
+	var l = s((B, a) => {
+		'use strict';
+		var F = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+		a.exports = F;
+	});
+	var T = s((j, m) => {
+		'use strict';
+		var w = l();
+		function u() {}
+		function y() {}
+		y.resetWarningCache = u;
+		m.exports = function () {
+			function e(n, o, R, A, D, _) {
+				if (_ !== w) {
+					var i = new Error(
+						'Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types'
+					);
+					throw ((i.name = 'Invariant Violation'), i);
+				}
+			}
+			e.isRequired = e;
+			function t() {
+				return e;
+			}
+			var r = {
+				array: e,
+				bigint: e,
+				bool: e,
+				func: e,
+				number: e,
+				object: e,
+				string: e,
+				symbol: e,
+				any: e,
+				arrayOf: t,
+				element: e,
+				elementType: e,
+				instanceOf: t,
+				node: e,
+				objectOf: t,
+				oneOf: t,
+				oneOfType: t,
+				shape: t,
+				exact: t,
+				checkPropTypes: y,
+				resetWarningCache: u,
+			};
+			return (r.PropTypes = r), r;
+		};
+	});
+	var f = s((V, h) => {
+		h.exports = T()();
+		var L, U;
+	});
+	var c = C(f()),
+		N = wp.i18n.__,
+		S = wp.richText.registerFormatType,
+		I = wp.richText.toggleFormat,
+		q = wp.blockEditor.RichTextToolbarButton,
+		g = 'rkv/sr-only',
+		d = N('Screen Reader Only', 'screen-reader-text-format'),
+		O = ({ isActive: e, value: t, onChange: r, onFocus: n }) => {
+			let o = () => {
+				r(I(t, { type: g }));
+			};
+			return React.createElement(
+				React.Fragment,
+				null,
+				React.createElement(q, {
+					icon: 'hidden',
+					title: d,
+					onClick: () => {
+						o(), n();
+					},
+					isActive: e,
+				})
+			);
+		};
+	O.propTypes = {
+		isActive: c.default.bool,
+		value: c.default.string,
+		onChange: c.default.func,
+		onFocus: c.default.func,
+	};
+	S(g, { title: d, tagName: 'span', className: 'text-format-sr-only', edit: O });
+})();
